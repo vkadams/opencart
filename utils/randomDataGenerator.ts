@@ -1,84 +1,85 @@
-import {faker} from '@faker-js/faker';
+import { faker } from '@faker-js/faker';
 
-export class RandomDataUtil
+export class RandomDataUtil{
+
+static getFirstName()
 {
-  static getFirstName(): string // to randomly generate first name
-  {
     return faker.person.firstName();
-  }
 
-  static getLastName(): string // to randomly generate last name
-  {
+}
+
+static getlastName()
+{
     return faker.person.lastName();
-  }
+    
+}
 
-  static getFullName(): string // to randomly generate full name
-  {
+
+static getFullName()
+{
     return faker.person.fullName();
-  }
+    
+}
 
-  static getEmail(): string // to randomly generate email address
-  {
+static getEmail()
+{
     return faker.internet.email();
-  }
 
-  static getUsername(): string 
-  {
-    return faker.internet.username();
-  }
+}
 
-  static getPassword(): string 
-  {
-    return faker.internet.password();
-  }
-
-  static getPhoneNumber() // to randomly generate phone number
-  {
+static getPhoneNumber()
+{
     return faker.phone.number();
+
+}
+
+ static getUsername(): string {
+    return faker.internet.username();
+
   }
 
-  static getRandomCountry(): string  
-  {
+  static getPassword(): string {
+    return faker.internet.password();
+ }
+
+ 
+  static getRandomCountry(): string {
     return faker.location.country();
   }
 
-  static getRandomState(): string  
-  {
+  
+    static getRandomState(): string {
     return faker.location.state();
   }
 
-  static getRandomCity(): string  
-  {
+  static getRandomCity(): string {
     return faker.location.city();
   }
 
-  static getRandomZip(): string  
-  {
+ static getRandomPin(): string {
     return faker.location.zipCode();
   }
 
- static getRandomAddress(): string  
-  {
+    
+ static getRandomAddress(): string {
     return faker.location.streetAddress();
   }
-
-  static getRandomPassword(length: number = 10): string // random password with 10 characters 
-  {
-    return faker.internet.password({length});
+  
+  static getRandomPassword(length: number = 10): string {
+    return faker.internet.password({ length });
   }
 
-  static getRandomAlphanumeric(length: number = 10): string  
-  {
-    return faker.string.alphanumeric({length});
+  static getRandomAlphanumeric(length: number): string {
+    return faker.string.alphanumeric(length);
   }
 
-  static getRandomNumeric(length: number): string  
-  {
-    return faker.string.numeric({length});
+  static getRandomNumeric(length: number): string {
+    return faker.string.numeric(length);
   }
 
-  static getRandomUUID(): string  
-  {
+  static getRandomUUID(): string {
     return faker.string.uuid();
   }
+
+
 }
